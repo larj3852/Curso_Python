@@ -1,0 +1,2 @@
+#Entrada
+nombre = input("Nombre: ")

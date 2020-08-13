@@ -1,0 +1,80 @@
+{%load static%}
+    
+    <!--
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/styles.css'%}"/>
+    -->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/styles.css?{%now "U"%}"/>
+    
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title%}
+        <!-- Cambia el titulo de cada pagina -->
+        Sitio Web con Html con Django
+        {% endblock%}
+    </title>
+    <!--charset para reseptar las tildes y shalala-->
+    
+</head>
+
+<body>
+    <!--Cabecera de la pagina-->
+    <header>
+        <div id="logotipo">
+            <!--Logo Django-->
+            <img src="{%static 'images/logo.png'%}">
+            <h1> Sitio Web con Django </h1>
+        </div>
+    </header>
+    <!--Definición de todo el menu-->
+    <nav>
+        <ul>
+            <li>
+                <a href="{%url 'index' %}"> Inicio </a>
+            </li>
+            <li>
+                <a href="{%url 'HolaMundo' %}" > Hola mundo </a>
+            </li>
+            <li>
+                <a href="{%url 'create' %}" > Crear Articulo </a>
+            </li>
+            <li>
+                <a href="{%url 'createfull' %}" > Crear Articulo Full</a>
+            </li>
+            <li>
+                <a href="/pagina-prueba"> Prueba</a>
+            </li>
+            <li>
+                <a href="/contacto"> Contacto</a>
+            </li>
+            </lu>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+    <!--Contenido-->
+
+    <div id="contenido">
+        <div class="box">
+            {% block contenido %}
+
+
+            <!-- Aqui val el contenido  del bloque -->
+
+
+            {% endblock%}
+        </div>
+    </div>
+    <!--Pie de pagina-->
+    <footer>
+        <!--Incluir fecha-->
+        Master en python &copy; Jesus :) | {%now "D, d M Y - H:i:s" %} 
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+
+{%extends 'layout.html'%}
+{%load filtros%}
+
+{% block title %}
+    <H1>Hola mundo con Django!!!</H1>
+{%endblock%}
+
+
+{%block contenido%}
+    <H1>Hola mundo con Django!!!</H1>
+    <H4>Soy jesus</H4>
+    <!--save convierte a código de la plantilla-->
+    {{"Jesus (mensaje del filtro)"|saludo|safe}}
+{% endblock%}

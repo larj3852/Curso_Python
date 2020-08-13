@@ -1,0 +1,43 @@
+
+{%extends 'layout.html'%}
+{%load filtros%}
+
+{% block title %}
+    Mostrar articulos
+{%endblock%}
+
+
+{%block contenido%}
+    <!--save convierte a código de la plantilla-->
+<h1 class="title">Listado de Articulos </h1>
+    {%if messages%}
+        {%for message in messages%}
+            <div class="message">
+                {{message}}
+            </div>
+        {%endfor%}
+    {%endif%}
+
+
+    {%for articulo in articulos%}
+    <article class="article-item">
+            {% if articulo.imagen != 'null' and articulo.imagen.url|length >= 1%} 
+        <!--Siempre habrá campo imagen, por lo cual hay que comprobar su existencia de otra forma-->
+                <div class="image">
+                    <img src = "{{articulo.imagen.url}}">
+                </div>
+            {%endif%} 
+            <div class="data">
+                <h2>{{articulo.id}}. {{articulo.title}}</h2>
+                <span class="date">{{articulo.create_at}}</span>
+                <p>{{articulo.content}}</p>
+                <p>
+                    <a href="{% url 'borrar' articulo.id %}" class="btn btn-delete"> Borrar </a><!--Opcion de borrar articulo-->
+                </p>
+            </div>
+            <br>
+            <div class="clearfix"></div>    <!-- Limpieza errores-->
+    </article>
+    {%endfor%}
+
+{% endblock%}

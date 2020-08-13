@@ -1,0 +1,27 @@
+{%extends 'layout.html'%}
+
+{% block title %}
+    Formularios en Django
+{%endblock%}
+
+{%block contenido%}
+      
+    <h1 class="title">Formularios en Django</h1> 
+
+     <!--Validacion de formularios-->
+    {%if form.errors %}
+        <strong class="rojo">¡Hay erroes en el formulario!
+            {{form.errors}}
+        </strong>
+    {%endif%}
+
+    <form action= "{%url 'createfull'%}" method="POST">
+
+     {% csrf_token %}  
+        {{form.as_p}}
+        <input type="submit" value="Guardar" />
+
+    </form>
+
+
+{% endblock%}

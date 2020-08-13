@@ -1,0 +1,20 @@
+{%extends 'layout.html'%}
+
+{% block title %}
+    {{titulo}}
+{%endblock%}
+
+{%block contenido%}
+    <p>{{mi_variable}}</p>
+
+    {%if nombre and nombre == 'Pedro Picapiedra'%}
+        <p>{{nombre}}</p>
+    {%else%}
+        <strong> El nombre no existe o no coincide </strong>
+    {%endif%}
+
+    <!--EJEMPLO: Template de template -->   
+    <!--Si agrego only, solo se toman en cuneta las variables escritas en la linea, no
+    las de la plantilla donde se va a incluirs-->
+    {%include 'fechaactual.html' with saludo="HolaMundo desde plantilla" %}
+{% endblock%}

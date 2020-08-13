@@ -1,0 +1,294 @@
+/*Estilos generales*/
+
+
+/*Selector astericos ---> selecciona todos los elementos y le da un estilo base*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif,Arial, Helvetica;
+    text-decoration: none;
+}
+
+body{
+    background-color: #f2f2f2;
+
+}
+
+/*Estilos de cabecera, si ubiera mas habría que dar un id una clase*/
+header{
+    width: 1212px;
+    height: 150px;
+    background-color: #23282B;
+    margin: 0 auto;    /*Se coloca en el centro*/
+
+
+}
+/*Espaciados SOLO AFECTARÁ A LO QUE ESTÉ DENTRO DE LA CAJA*/
+.box p, .box h2, .box h3, .box ul{margin-top: 5px;
+margin-bottom: 5px;}
+
+.box ul, .box ol{
+    margin-left: 20px;
+    margin-bottom: 10px;
+
+}
+
+
+#logotipo {
+
+    width: 35%;
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+
+#logotipo h1{
+    display: block;
+    margin-top: 40px;
+    margin-left: 20px;
+    float: left;
+    /*text-transform: uppercase;*/
+    font-weight: lighter;
+    color: #2ba977;
+
+}
+
+#logotipo img{
+    display: block;
+    width: 60px;
+    float:left;
+    margin-top: 20px;
+}
+
+
+/*Estilos barra de navegacion*/
+
+nav{
+    width: 1250px;
+    height: 40px;
+    background-color: #1B1F1E;
+    border: 1px solid #333333;
+    margin: 0 auto;
+    box-shadow: 0px 22px 22px gray; /*x,y,difuminado,color*/
+    font-size: 15px;
+    }
+
+nav ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li{
+    line-height: 40px;
+    float: left;    /*Se colocan a la izquierda*/
+}
+
+nav ul li a{
+    display:block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #d1d4d6;
+}
+
+nav ul li a:hover{
+    background: #2ba977;
+    box-shadow: 0px 0px 0px #444444 inset; /*inset -->dentro de la caja*/
+    color:white;
+    transition: all 300ms;  /*efecto de 300 ms*/
+}
+
+
+/*Barra de efecto 3D*/
+.barra{
+    width:1250px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.esquina-izquierda{
+    display: block;
+    border-left: 20px solid transparent; /*Clase 199*/
+    border-top: 10px solid #2b2f30;
+    float:left;
+
+}
+
+.esquina-derecha{
+    display:block;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #2b2f30;
+    float: right;
+}
+
+.relleno-barra{
+    display:block;
+    width: 1210px;
+    height: 10px;
+    background: #2b2f30;
+    float:left;
+}
+
+/*Estilos del contennido principal*/
+/*
+        Contenido lo que hará es posicionar
+        Box dará el estilo 
+*/
+#contenido {
+
+    width: 1212px;
+    min-height: 930px;  /*ALtura minima*/
+    margin:0 auto;      /*Colocacion en el centro del elemento*/
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.box{                   /*Esta es una clase*/
+    background: white;
+    width: 95%;
+    min-height: 930px;
+    padding: 20px;
+    border: 2px solid #dddddd;
+}
+
+/*************************Caja para solo formularios***************************/
+/*************************Caja para solo formularios***************************/
+/*************************Caja para solo formularios***************************/
+
+.box form{
+    width: 40%;
+}
+
+.box form input,
+.box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.box form input[type="text"],
+.box form textarea{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+
+.box form select{
+    width: 100px;
+    padding: 5px;
+}
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 10px;
+    background: #2ab977;
+    border: 1px solid black;
+    color:white;
+    transition: 300ms all;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #0d442b;
+    transition: 300ms all;
+}
+
+.title{
+    color: #444444;
+    letter-spacing: 1px;
+        font-size: 30px;
+}
+
+footer{
+    width: 1250px;
+    background-color: #1b1e1f;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
+
+}
+
+/*VALIDACION DE FORMUARIOS ADVERTENCIA*/
+
+.rojo{
+    color: red;
+    box-shadow: 0px 0px 0px 4px black;
+}
+
+.message{
+    padding: 20px;
+    background: #1f7e58;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*******************MAQUETACION DE IMAGENES - ARTICULOS*********************/
+/*******************MAQUETACION DE IMAGENES - ARTICULOS*********************/
+/*******************MAQUETACION DE IMAGENES - ARTICULOS*********************/
+.article-item{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    clear: both;    /**/
+}
+
+.article-item .image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;/*Lo que sobresalga se oculta*/
+
+}
+
+.article-item .image img{   /*A la imagen dentro del div-->imagen*/
+    height: 200px;
+}
+
+.article-item .data{
+    float:left;
+    padding: 15px;
+    padding-top: 10px;
+}
+.article-item h2{
+    display: block;
+    font-size: 25px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.article-item span .date{
+    display: block;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+}
+.clearfix{  /*Limpiear errores*/
+    clear: both;
+    float: none;
+}
+
+
+.article-item .btn{
+    width: 50px;
+    padding: 10px;
+    background: rgba(255, 0, 0, 0.671);
+    color: white;
+    border: 1px solid black;
+    display: block;
+    margin-top: 20px;
+    width: 80px;
+    text-align: center;
+}
+
+
