@@ -1,0 +1,44 @@
+{% extends 'layouts/layout.html' %} 
+
+<!--Django es inteligente a encontrar layouts aunque esten en otro lado del proyecto-->
+
+
+{% block title %}
+    {{articulo.title}}
+{% endblock%}
+
+{% block contenido %}
+            <!--save convierte a código de la plantilla-->
+    <h1 class="title">Listado de Articulos </h1>
+    {%if messages%}
+        {%for message in messages%}
+            <div class="message">
+                {{message}}
+            </div>
+        {%endfor%}
+    {%endif%}
+
+
+                {% if articulo.image != 'null' and articulo.image.url|length >= 1%} 
+            <!--Siempre habrá campo imagen, por lo cual hay que comprobar su existencia de otra forma-->
+                    <div class="image">
+                        <img src = "{{articulo.image.url}}">
+                    </div>
+                {%endif%} 
+                <div class="data">
+                    <h2>{{articulo.id}}. {{articulo.titulo}}</h2>
+                    <!--La ventaja de relacionar tablas, es que se puede usar la informacion de ambas tablas-->
+                    <span class="date">{{articulo.create_at}} | {{articulo.user.first_name}} {{articulo.user.last_name}} | {{articulo.user.email}}</span>
+                    <span class="date">
+                            {%for category in articulo.categories.all%} <!--Consuta de categorias-->
+                                <a href="#">{{category}}</a>
+                                <!--Condicion para agregar separadores-->
+                                {% if forloop.counter < articulo.categories.all|length %}  
+                                    {{"|"}}
+                                {% endif %}
+                            {% endfor %}
+                    </span>
+                    <p>{{articulo.contenido|safe}}</p>
+
+
+{% endblock  %}

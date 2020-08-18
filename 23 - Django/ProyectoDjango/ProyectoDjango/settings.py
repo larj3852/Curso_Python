@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -39,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'AplicacionPrincipal',
     'Paginas.apps.PaginasConfig',
-    'ckeditor'
+    'ckeditor',
+    'blog.apps.BlogConfig'
 ]
 
 MIDDLEWARE = [
@@ -66,7 +68,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'Paginas.context_processor.get_pages'
+                'Paginas.context_processor.get_pages',
+                'blog.context_processor.get_categories'
             ],
         },
     },
@@ -137,3 +140,8 @@ CKEDITOR_CONFIGS = {
         ]
     }
 }
+
+#Media
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+

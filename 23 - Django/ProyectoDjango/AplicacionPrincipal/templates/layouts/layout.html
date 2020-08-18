@@ -40,6 +40,18 @@
                     <a href="{%url 'pages' page.2 %}" > {{page.1}} </a>
                 </li>
             {%endfor%}
+            <li>
+                <a href="{%url 'list_articles'%}" > Categorias </a>
+                <ul>
+                    <!--Submenu Categorias-->
+                    {%for category in categories%} 
+                        <li>
+                            <a href="{%url 'list_categories' category.0%}"> {{category.1}} </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            
             </lu>
     </nav>
     <div class="barra">

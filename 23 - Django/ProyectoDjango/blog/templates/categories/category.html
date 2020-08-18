@@ -1,0 +1,20 @@
+{% extends 'layouts/layout.html' %} 
+
+<!--Django es inteligente a encontrar layouts aunque esten en otro lado del proyecto-->
+
+
+{% block title %}
+    {{category.name}}
+{% endblock%}
+
+{% block contenido %}
+            <!--save convierte a código de la plantilla-->
+    <h1 class="title">{{category.name}} </h1>
+    <p>{{category.description}}</p>
+    <!--Puedo mandar a llamar a los articulos desde las categorias al estar 
+    relacionandos ambos entre sí en la tabla articles_categories en la relación
+    many to many en la base de datos -->
+    {% include 'articles/articles.html' with articles=category.articles_set.all %}
+
+
+{% endblock  %}
