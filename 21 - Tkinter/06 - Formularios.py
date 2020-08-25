@@ -56,9 +56,4 @@ boton.config(bg="green",fg="white",padx=10,pady=4)
 
 
 
-
-
-
-
-
 ventana.mainloop()

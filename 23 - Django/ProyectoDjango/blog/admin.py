@@ -4,9 +4,15 @@ from  .models import *
 
 class  CategoryAdmin(admin.ModelAdmin):
     readonly_fields = ('create_at','updated_at')
+    list_display = ('name','create_at')
+    search_fields = ('name','description')
+
 
 class ArticleAdmin(admin.ModelAdmin):
     readonly_fields =('user','create_at','updated_at')
+    search_fields = ('titulo','user')
+    list_display = ('titulo','user','public','create_at')
+    list_filter = ('public','user','categories')
 
     #Metodo para cuando se guardan articulos 
     def save_model(self,request,obj,form,change):  

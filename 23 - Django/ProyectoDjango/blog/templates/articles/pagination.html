@@ -1,0 +1,21 @@
+<div class="pagination">
+    <br><br><br><br>
+    <!--
+    <h1> PAGINATION </h1>      
+    -->
+    <p align="center">
+            <!--Comprueba si no hay articulos previos que mostar-->  
+            {%if articulos.has_previous %}    
+                <a href='?page=1'>&laquo; Primero </a>
+                <a href="?page={{ articulos.previus_page_number}}"> Anterior </a>
+            {% endif %}
+            <!--Pagina n de tantas-->
+            <span class='actual'> Pagina {{articulos.number}} de {{articulos.paginator.num_pages}}</span>
+            <!--Comprueba si no hay articulos siguientes que mostar-->
+            {%if articulos.has_next %}
+                <a href="?page={{ articulos.next_page_number}}"> Siguiente </a>   
+                <a href="?page={{articulos.paginator.num_pages}}"> Ultima &raquo;</a>
+                
+            {% endif %}
+    </p>
+</div>

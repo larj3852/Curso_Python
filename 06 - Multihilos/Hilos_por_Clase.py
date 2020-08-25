@@ -2,7 +2,7 @@
 * Se hereda la clase threading.Thread como padre de las clases a declarar
 * Se debe incluir un método "def run(self):" para que el hilo corra
 
-* Si se quisiera evitar la clase run  
+* Si se quisiera evitar escribir la funcion run  
 * NOTA-> Se debe agregar el self ya que se está dentro de una clase
 * SINTAXIS:
     #threading.Thread.__init__(self,name=nombre_hilo,target=Hilo1.consultar,args(self, id,data))

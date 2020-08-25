@@ -2,6 +2,7 @@ from django.db import models
 from ckeditor.fields import RichTextField
 from django.contrib.auth.models import  User
 
+
 # Create your models here.
 class  Category(models.Model):
     name = models.CharField(max_length=100,verbose_name="Nombre")
@@ -21,7 +22,7 @@ class Article(models.Model):
     contenido = RichTextField(verbose_name="Contenido")
     image = models.ImageField(default='null',verbose_name="Imagen",upload_to="articles")
     public = models.BooleanField(verbose_name="Publico")
-    user = models.ForeignKey(User,on_delete=models.CASCADE,editable=False) #Relación con un foreign Key
+    user = models.ForeignKey(User,on_delete=models.CASCADE,editable=False,) #Relación con un foreign Key
     categories = models.ManyToManyField(Category, verbose_name="Categorias",blank=True,
                                         related_name="articles")  #null='True'
     #Relacion con muchas categorias

@@ -1,5 +1,6 @@
 from tkinter import *
-from PIL import Image, ImageTk
+import PIL
+from PIL import ImageTk
 
 ventana = Tk()
 ventana.title("Frames | curso")

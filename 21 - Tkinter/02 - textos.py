@@ -1,4 +1,4 @@
-from tkinter import TK,Label
+from tkinter import Tk,Label,CENTER
 ventana = Tk()
 ventana.geometry("600x400")
 
