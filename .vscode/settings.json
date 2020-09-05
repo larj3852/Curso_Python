@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python37_64\\python.exe",
+    "python.pythonPath": "/home/jesus_lara/anaconda3/bin/python",
     "git.ignoreLimitWarning": true
 }
