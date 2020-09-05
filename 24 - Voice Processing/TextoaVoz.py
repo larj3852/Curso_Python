@@ -9,15 +9,14 @@ from gtts import  gTTS
 from playsound import playsound
 
 #%% Guardar archivo en mp3
-Archivo = "sonido_nuevo.mp3"
-tts = gTTS("Hola que hace",lang="es-us")
+Archivo = "wenas.mp3"
+tts = gTTS("uuuuuuueeeeeeennas",lang="es-us")
 tts.save(Archivo)
 
 #%% Concatenacion voz con archivo open
 tts = gTTS("Abriendo Archivo con el metodo open",lang="es-us")
 with open("2-ArchivoOpen.mp3","wb") as archivo:
     tts.write_to_fp(archivo)
-
 
 # %% Escritura en distintos idiomas
 tts_e = gTTS("I am speaking in english",lang="en")
@@ -30,7 +29,7 @@ with open("3-DistintosIdiomas.mp3","wb") as archivo3:
 
 
 # %% Reproducir en python
-playsound("5 - Hablando lento")
+playsound("wenas.mp3")
 
 # %% Velocidad del texto
 tts5 = gTTS("Estoy hablando mas lento",lang="es-us",slow=)

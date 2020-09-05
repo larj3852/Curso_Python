@@ -230,3 +230,103 @@ nav > ul > li:hover > ul >li:hover > a{
 .image img{
     width: 100%;
 }
+
+
+/*************************Caja para solo formularios***************************/
+/*************************Caja para solo formularios***************************/
+/*************************Caja para solo formularios***************************/
+
+.box form{
+    width: 40%;
+}
+
+.box form input,
+.box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.box form input[type="text"],
+.box form textarea{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+
+.box form select{
+    width: 100px;
+    padding: 5px;
+}
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 10px;
+    background: #2ab977;
+    border: 1px solid black;
+    color:white;
+    transition: 300ms all;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #0d442b;
+    transition: 300ms all;
+}
+
+.title{
+    color: #444444;
+    letter-spacing: 1px;
+        font-size: 30px;
+}
+
+footer{
+    width: 1250px;
+    background-color: #1b1e1f;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
+
+}
+
+/****************************** Messages *******************************************/
+/****************************** Messages *******************************************/
+
+
+.message,
+.alert-success{
+    padding: 20px;
+    background: #1f7e1f;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/****************************** Loggin *******************************************/
+/****************************** Loggin *******************************************/
+.login form input[type="text"],
+.login form input[type="password"]{
+    width: 200px;
+    height: 30px;
+    color: #035540;
+}
+
+.alert{
+    padding: 20px;
+    background:   #1f7e1f;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+.alert-warning{
+      background: red;
+}

@@ -32,27 +32,44 @@
     <!--Definición de todo el menu-->
     <nav>
         <ul>
+
             <li>
                 <a href="{%url 'index' %}"> Inicio </a>
             </li>
-            {%for page in pages%}
+            <!--Inicio o cierre sesion-->
+            {% if  user.email%}
                 <li>
-                    <a href="{%url 'pages' page.2 %}" > {{page.1}} </a>
+                     <a href="{%url 'logout' %}"> Cerrar Sesion </a>
                 </li>
-            {%endfor%}
-            <li>
-                <a href="{%url 'list_articles'%}" > Categorias </a>
-                <ul>
-                    <!--Submenu Categorias-->
-                    {%for category in categories%} 
-                        <li>
-                            <a href="{%url 'list_categories' category.0%}"> {{category.1}} </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </li>
-            
-            </lu>
+            {% else %}
+                <li>
+                    <a href="{%url 'login' %}"> Ingresar </a>
+                </li>
+                <li>
+                    <a href="{%url 'registro' %}"> Registro </a>
+                </li>
+            {% endif %} 
+            <!--categorias mostradas solo si se está conectado-->
+            {% if user.email %}
+                {%for page in pages%}
+                    <li>
+                        <a href="{%url 'pages' page.2 %}" > {{page.1}} </a>
+                    </li>
+                {%endfor%}
+                    <li>
+                        <a href="{%url 'list_articles'%}" > Categorias </a>
+                        <ul>
+                            <!--Submenu Categorias-->
+                            {%for category in categories%} 
+                                <li>
+                                    <a href="{%url 'list_categories' category.0%}"> {{category.1}} </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+            {% endif %}
+              
+        </lu>
     </nav>
     <div class="barra">
         <span class="esquina-izquierda"></span>

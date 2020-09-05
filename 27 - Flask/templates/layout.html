@@ -1,0 +1,28 @@
+<!DOCTIPE HTML>
+<html   lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>{%block title%}  
+
+                {%endblock%} 
+        </title>
+    </head>
+    <body>
+        <h1>Aprendiendo Flask</h1>
+        <hr/>
+        <lu>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="{{ url_for('informacion') }}">informacion</a></li>
+            <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+            <li><a href="{{ url_for('lenguajes') }}">Lenguajes</a></li>
+        </lu>
+
+        
+    
+        <section id="content">
+            {%block content%}
+
+            {%endblock%}
+        </section>
+    </body>
+</html>
