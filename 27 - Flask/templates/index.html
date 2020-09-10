@@ -1,10 +1,24 @@
-<!DOCTIPE HTML>
-<html   lang="es">
-    <head>
-        <title>Aprendiendo con Flask</title>
-    </head>
-    <body>
-        <h1>Aprendiendo Flask</h1>
-        
-    </body>
-</html>
+{% extends 'layout.html'%}
+
+{%block title%}  
+    Index
+{%endblock%} 
+
+{%block content%}
+
+    <h1>Inicio</h1>
+    <!--Creacion de variable-->
+    {%with messages = get_flashed_messages() %} 
+        {%if messages%}
+            {% for message in messages  %}
+                    <div class="message alert-success">
+                        {{message}}
+                    </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <p>Aprendiendo Flask</p>
+    <h3>{{texto|safe}}</h3>
+
+{%endblock%}

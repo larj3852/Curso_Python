@@ -1,0 +1,31 @@
+{% extends 'layout.html'%}
+
+{%block title%}  
+    Editar Coche
+{%endblock%} 
+
+{%block content%}
+
+    {% if  coche %}
+
+        <h1>Editar Coche {{coche.0}} {{coche.1}}</h1>
+            <div class="box">
+                    <form action="" method ='POST'>
+
+                        <label for='modelo'>MODELO</label>
+                        <input type='text' name='modelo' value="{{coche.1}}" />
+                        <br>
+                        <label for='marca'>MARCA</label>
+                        <input type='text' name='marca'value="{{coche.2}}" />
+                        <br>
+                        <label for='precio'>PRECIO</label>
+                        <input type='number' step='0.001' name='precio' value="{{coche.3}}" />
+                        <br>
+                        <label for='ciudad'>CIUDAD</label>
+                        <input type='text' name='ciudad' value="{{coche.4}}" /> 
+                        <br>
+                        <input type='submit' value='Submit'/>
+                    </form>
+            </div>   
+    {% endif %}
+{%endblock%}

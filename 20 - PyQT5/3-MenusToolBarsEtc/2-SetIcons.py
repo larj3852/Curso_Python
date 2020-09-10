@@ -23,10 +23,11 @@ class ChangeIcon(QWidget):
         Set up widgets.
         """
         info_label = QLabel("Click on the button and select a fruit.")
-        self.images = ["images/1_apple.png",
-                        "images/2_pineapple.png",
-                        "images/3_watermelon.png",
-                        "images/4_banana.png"
+        base = "20 - PyQT5/3-MenusToolBarsEtc/images/"
+        self.images = [base+"1_apple.png",
+                        base+"2_pineapple.png",
+                        base+"3_watermelon.png",
+                        base+"4_banana.png"
                         ]
         self.icon_button = QPushButton(self)
         self.icon_button.setIcon(QIcon(random.choice(self.images)))

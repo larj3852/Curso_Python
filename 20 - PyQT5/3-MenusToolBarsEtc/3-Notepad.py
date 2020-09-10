@@ -11,6 +11,10 @@ QColorDialog    creates a dialog box for selecting colors  Selecting colors can 
                 for changing the color of the text, a window’s
                 background color, and many other actions.
 
+QTextEdit       already has predefined slots, such as cut(), copy(), and paste(), 
+                to interact  with text. For most of the actions in the Edit menu, 
+                their signals are connected to these special slots rather than creating 
+                new ones.
 """ 
 
 # richtext_notepad.py
@@ -90,10 +94,12 @@ class Notepad(QMainWindow):
         highlight_act = QAction(QIcon('images/highlight.png'), 'Highlight', self)
         highlight_act.setShortcut('Ctrl+Shift+H')
         highlight_act.triggered.connect(self.chooseFontBackgroundColor)
+        #Create Help menu
         about_act = QAction('About', self)
         about_act.triggered.connect(self.aboutDialog)
 
-                # Create menubar
+
+        """ Create menubar """ 
         menu_bar = self.menuBar()
         menu_bar.setNativeMenuBar(False)
         # Create file menu and add actions

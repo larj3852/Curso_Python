@@ -18,7 +18,7 @@ body{
 header{
     width: 1212px;
     height: 150px;
-    background-color: #23282B;
+    background-color: #1e2529;
     margin: 0 auto;    /*Se coloca en el centro*/
 
 
@@ -43,6 +43,7 @@ margin-bottom: 5px;}
 }
 
 /*id id id id id id id logotipo*/
+
 #logotipo h1{
     display: block;
     margin-top: 40px;
@@ -50,7 +51,7 @@ margin-bottom: 5px;}
     float: left;
     /*text-transform: uppercase;*/
     font-weight: lighter;
-    color: #bb0303;
+    color: #b1003b;
 
 }
 
@@ -237,7 +238,9 @@ nav > ul > li:hover > ul >li:hover > a{
 /*************************Caja para solo formularios***************************/
 
 .box form{
-    width: 40%;
+    display: block;
+    width: 150px;
+    height: 200px;
 }
 
 .box form input,
@@ -329,4 +332,20 @@ footer{
 }
 .alert-warning{
       background: red;
+}
+
+
+.btn{
+    padding: 10px;
+    background: #b1003b;
+    color: white;
+    border: 1px solid black;
+    display: block;
+    margin-top: 15px;
+    width: 120px;
+    text-align: center;
+}
+
+.btn-warning{
+    background: coral;
 }

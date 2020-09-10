@@ -1,6 +1,15 @@
-
-
 #%% Conexion
+"""
+XAMPP
+init        $sudo /opt/lampp/lampp start
+
+init GUI    $cd /opt/lampp
+            $sudo ./manager-linux.run 
+            $sudo ./manager-linux-x64.run
+
+stop        $sudo /opt/lampp/lampp stop
+"""
+
 import mysql.connector
 Database = mysql.connector.connect(host =  "localhost",
                                     user = "root",
